@@ -23,12 +23,16 @@
           Update
         </button> -->
         <!-- :brandId="brand.id" -->
-        <!-- <updateBrand :brandId="brand.id" @brand-updated="handleBrandUpdated" /> -->
-        <random
+        <updateBrand
           :brandId="brand.id"
           :brandData="brand"
           @brand-updated="handleBrandUpdated"
         />
+        <!-- <random
+          :brandId="brand.id"
+          :brandData="brand"
+          @brand-updated="handleBrandUpdated"
+        /> -->
         <deleteBrand @brandDeleted="handleBrandDeleted" :brandId="brand.id" />
         <br />
       </div>

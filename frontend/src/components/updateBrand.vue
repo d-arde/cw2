@@ -25,7 +25,7 @@
           ></button>
         </div>
         <div class="modal-body">
-          <form id="updateForm" class="form-group" v-if="updateBrandData">
+          <form id="updateForm" class="form-group" v-if="brandData">
             <!-- <label for="brandID">Brand ID: </label>
             <input
               type="text"
@@ -36,28 +36,28 @@
             <label for="brandName">Brand Name: </label>
             <input
               type="text"
-              v-model="updateBrandData.brand_name"
+              v-model="brandData.brand_name"
               placeholder="Brand Name"
               class="form-control"
             />
             <label for="brandDateFounded">Brand Date Founded: </label>
             <input
               type="date"
-              v-model="updateBrandData.date_founded"
+              v-model="brandData.date_founded"
               placeholder="Date Founded"
               class="form-control"
             />
             <label for="brandEmail">Brand Email: </label>
             <input
               type="email"
-              v-model="updateBrandData.email"
+              v-model="brandData.email"
               placeholder="Email"
               class="form-control"
             />
             <label for="brandRevenue">Brand Revenue: </label>
             <input
               type="text"
-              v-model="updateBrandData.revenue"
+              v-model="brandData.revenue"
               placeholder="Revenue"
               class="form-control"
             />
@@ -76,10 +76,10 @@
 <script>
 export default {
   props: {
-    // brandData: {
-    //   type: Object,
-    //   required: true,
-    // },
+    brandData: {
+      type: Object,
+      required: true,
+    },
     brandId: {
       type: Number,
       required: true,
